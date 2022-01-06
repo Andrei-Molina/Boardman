@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Skateboard Parts</title>
+	
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+	
+	<link href="https://allfont.net/allfont.css?fonts=anson" rel="stylesheet" type="text/css" />
+
+	<style>
+		
+		body, html 
+		{
+			height: 100%;
+			margin: 0;
+		}
+
+		.bg	    
+		{
+				position: relative;
+				min-width: 100%;
+		}
+
+		.bg::before 
+		{
+				content: "";
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				background-image: url("Images/Background/Skateboard.jpg");
+				filter: brightness(40%);
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+		}
+		
+		.NavBar 	
+		{
+				overflow: hidden;
+				background-color: #463E3F;
+		}
+		
+		.NavBar a 
+		{
+				float: left;
+				color: white;
+				padding: 12px 18px;
+				font-size: 2vw;
+				font-family: 'Anson', arial;
+				text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+				transition: text-decoration-color 500ms;
+		}
+		
+		.NavBar a:hover:not(.active)
+		{
+			background-color: #28282B;
+			color: white;
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+		
+		.NavBar a.active {
+			background-color: #0D5BE1;
+			color: white;
+		}
+		
+		.Logo	
+		{
+			width: 5%;
+		}
+		
+		h1.WebsiteTitle
+		{
+				text-align: center;
+				font-family: Baskerville old face;
+				background-color: #463E3F;
+				color: white;
+				font-size: 5vw;	
+				border-radius: 1000px 1000px 1000px;
+				box-shadow: 10px -10px 25px;
+		}
+			
+		.ProductBanner
+		{
+			width: 100%;
+			position: relative;
+			
+		}
+			
+		.ContainerProductType
+		{
+			border: 1px solid white;
+			text-decoration: none;
+			border-radius: 50px 20px;
+			margin: 0;
+		}
+		
+		.ContainerProductType:hover
+		{
+			transform: translate(0, -6px);
+			box-shadow: 10px -10px 25px;
+			background-color: #357EC7;
+		}
+		
+			
+		.ProductType
+		{
+			color: white;
+			padding: 15px 5px;
+			text-align: center;
+			font-size: 6vw;
+			font-family: Bahnschrift;
+			text-decoration: underline;
+		}
+		
+		.GoBack
+		{
+			color: white;
+			text-decoration: underline;
+			position: relative;
+			font-size: 20px;
+		}
+		
+		.GoBack:hover
+		{
+			color: #98FF98;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<div class="NavBar">
+		<a href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a class="active" href="Products.html">Products</a>
+		<a href="ContactUs.html">Contact Us</a>
+	</div>
+	
+	<h1 class = "WebsiteTitle"><img src = "Images/Logo/Logo.png" class = "Logo" alt="Boardman Logo">Boardman</h1>
+	
+	<div class = "bg">
+		<div class = "Products" style="position: relative;">
+			<br><br><br><br><br><br><br><br><br><br>
+			<a href="SkateboardDecks.html">
+				<div class = "ContainerProductType">
+					<h1 class="ProductType"><img src="Images/Skateboard Decks/SK8Mafia Design.png" alt = "A picture of a SK8Mafia Design Skateboard Deck" style="width: 20%;">Skateboard Decks</h1>
+				</div>
+			</a>
+			<br><br><br><br><br><br><br><br><br><br>
+			
+			<a href="SkateboardTrucks.html">
+				<div class = "ContainerProductType">
+					<h1 class="ProductType"><img src="Images/Skateboard Trucks/IRON 5.8_ Black Dark IRON TRUCK.png" alt = "A picture of an IRON 5.8_ Black Dark IRON TRUCK" style="width: 20%;">Skateboard Trucks</h1>
+				</div>
+			</a>
+			<br><br><br><br><br><br><br>
+			
+			<a href="SkateboardWheels.html">
+				<div class = "ContainerProductType">
+					<h1 class="ProductType"><img src="Images/Skateboard Wheels/Skateboard Wheels Black and White 56mm wheels.png" alt = "A picture of a Skateboard Wheels Black and White 56mm wheels" style="width: 20%;">Skateboard Wheels</h1>
+				</div>
+			</a>
+			<br><br><br><br><br><br><br>
+		</div>
+		<a href="Products.html" class="GoBack">Go Back to Products</a>
+	</div>
+</body>
+</html>

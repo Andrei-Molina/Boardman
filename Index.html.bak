@@ -1,0 +1,362 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Home</title>
+
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+	<link href="https://allfont.net/allfont.css?fonts=anson" rel="stylesheet" type="text/css" />
+	
+	<style>
+	
+		@media screen and (max-width: 800px) 
+		{
+			.bg 
+			{
+			width: 100%;
+			}
+		}
+		
+		body, html 
+		{
+			width: 100%;
+			margin: 0;
+			max-height: 100%;
+			max-width: 100%;
+		}
+
+		.NavBar 	
+		{
+			overflow: hidden;
+			background-color: #463E3F;
+		}
+		
+		.NavBar a 
+		{
+			float: left;
+			color: white;
+			padding: 12px 18px;
+			font-size: 2vw;
+			font-family: 'Anson', arial;
+			text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+			transition: text-decoration-color 500ms;
+		}
+		
+		.NavBar a:hover:not(.active)
+		{
+			background-color: #28282B;
+			color: white;
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+		
+		.NavBar a.active 
+		{
+			background-color: #0D5BE1;
+			color: white;
+		}
+		
+		.Logo	
+		{
+			width: 5%;
+		}
+		
+		h1.WebsiteTitle
+		{
+			text-align: center;
+			font-family: Baskerville old face;
+			background-color: #463E3F;
+			color: white;
+			font-size: 5vw;	
+			border-radius: 1000px 1000px 1000px;
+			box-shadow: 10px -10px 25px;
+		}
+
+		.bg	    
+		{
+			position: relative;
+			height: 280%;
+			width: 100%;
+			overflow: hidden;	
+		}
+
+		.bg::before 
+		{
+			content: "";
+			position: absolute;
+			top: 0; left: 0;
+			width: 283.5%;
+			height: 100%;
+			background-image: url("Images/Background/Skateboard.jpg");
+			filter: brightness(40%);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			overflow: hidden;
+		}
+
+		.IntroductoryDiv    
+		{
+			position: relative;
+			overflow: hidden;
+		}
+
+		.IntroductoryText 
+		{
+			text-align: center;
+			color: white;
+			border: 1px solid white;
+			width: 70%;
+			margin: auto;
+			padding: 10px 12px;
+			font-family: Bahnschrift;
+			overflow: hidden;
+		}
+		
+		.VideoCommercial 
+		{
+			position: relative;
+			text-align: center;
+			font-family: Bahnschrift;
+			font-size: 2vw;
+			color: white;
+			box-shadow: 10px -10px 50px;
+		}
+		
+		video
+		{
+			max-width: 100%;
+			max-height: 50%;
+			border-radius: 50px 20px;
+			margin: 0;
+		}
+		
+		.ÄudioCommercial
+		{
+			position: relative;
+			text-align: center;
+			box-shadow: 10px -10px 50px;
+			font-family: Bahnschrift;
+			font-size: 2vw;
+			color: white;
+		}
+		
+		audio
+		{
+			width: 50%;
+			max-width: 50%;
+			max-height: auto;
+			margin: 0 auto;
+			padding: 50px;
+			transition: transform .4s;
+		}
+		
+		audio:hover
+		{
+			transform: scale(1.5);
+			box-shadow: 10px -10px 25px;
+		}
+		
+		.BenefitList	    
+		{
+			width: 100%;
+			position: relative;
+		}
+
+		.BenefitListHeading 
+		{
+			color: white;
+			text-align: center;
+			font-size: 70px;
+			font-family: Bahnschrift;
+			font-weight: bold;
+		}
+
+		.LeftSide	    
+		{
+			width: 40%;
+			float: left;
+			height: 200px;
+			text-align: center;
+			color: white;
+			font-family: Bahnschrift;
+			font-size: 2vw;
+			font-weight: bold;
+		}
+
+		.RightSide	   
+		{
+			margin-left: 60%;
+			height: 200px;
+			text-align: center;
+			color: white;
+			font-family: Bahnschrift;
+			font-size: 2vw;
+			font-weight: bold;
+		}
+
+		.BenefitListIcon    
+		{
+				width: 20%;
+		}
+		
+		.TI
+		{
+			background-color: #ddd;
+		}
+		
+		.column 
+		{
+			float: left;
+			width: 15%;
+			padding: 1vw 3vw;
+			text-align: center;
+			margin-left: 3vw;
+		}
+		
+		.TIHeading
+		{
+			color: #3D3C3A;
+			font-size: 2vw;
+		}
+		
+		.row:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.TIContent
+		{
+			font-family: Bahnschrift;
+			font-size: 1vw;
+		}
+		
+		
+		@media screen and (max-width: 800px) 
+		{
+			.row, .column h2, .LeftSide, .RightSide 
+			{
+				font-size: 3vw; /* The font size is 3vw, when the viewport is 800px or smaller */
+			}
+		}
+
+		@media screen and (max-width: 800px) 
+		{
+			.row, .column p 
+			{
+				font-size: 2vw; /* The width is 100%, when the viewport is 800px or smaller */
+			}
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<div class="NavBar">
+		<a class="active" href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a href="Products.html">Products</a>
+		<a href="ContactUs.html">Contact Us</a>
+	</div>
+
+	<h1 class = "WebsiteTitle"><img src = "Images/Logo/Logo.png" class = "Logo" alt = "Logo">Boardman</h1>
+	
+	<div class = "bg">	
+		<div class = "IntroductoryDiv" style="overflow: hidden;">
+			<div class="Introductory">
+				<br><br><br><br><br><br><br><br><br><br>
+				<h1 class = "IntroductoryText">
+					<font style="font-size: 4vw;">We Make People Fly</font>
+					<font style="font-size: 6vw;"><br>With The Products</font>
+					<font style="font-size: 12vw;"><br>They Buy</font></h1>
+			</div>
+			<br><br><br><br><br><br><br><br><br><br>
+		</div>
+		
+		<div class = "VideoCommercial">
+		<br>
+			<h1>Video Commercial</h1>
+			<video loop="true" autoplay="autoplay" controls muted>
+				<source src = "Video/Group E - Video Commercial (Edited).mp4" type = "video/mp4">
+				<source src = "Video/Group E - Video Commercial (Edited).ogg" type = "video/ogg">
+			</video>
+			<br><br>
+		</div>
+		
+		<br><br>
+		
+		<div class = "ÄudioCommercial">
+		<br>
+			<h1>Audio</h1>
+			<audio loop="true" autoplay controls muted>
+				<source src = "Audio/EDITED BOARDMAN SCRIPT (GROUP E).ogg" type = "audio/ogg">
+				<source src = "Audio/EDITED BOARDMAN SCRIPT (GROUP E).mp3" type = "audio/mpeg">
+			</audio>
+			<br><br>
+		</div>
+
+		<div class="BenefitList">
+			<p class="BenefitListHeading">Why Buy Ours?</p>
+				<div class="LeftSide">
+					<img src="Images/BenefitList/6 month warranty.png" class="BenefitListIcon" alt="6 Month Warranty Icon">
+					<p class>6 Months Warranty</p>
+					<p class>Boardman guarantees a complete repair or replacement for a faulty product on any purchase within 6 months as long as you present the needed documents.</p>
+				</div>
+
+				<div class="RightSide">
+					<img src="Images/BenefitList/easily customize product.png" class="BenefitListIcon" alt="Easily Customizable Product Icon">
+					<p>Easily Customizable Products</p>
+					<p>Boardman allows customers to customize the design and parts of their skateboards.</p>
+				</div>
+			
+				<br><br><br><br><br><br><br><br><br><br>
+
+				<div class="LeftSide">
+					<img src="Images/BenefitList/fast product shipping.png" class="BenefitListIcon" alt="Fast Product Shipping Icon">
+					<p>Fast Product Shipping</p>
+					<p>Boardman ships their product in any part of the Philippines within 6 - 10 days.</p>
+				</div>
+
+				<div class="RightSide">
+					<img src="Images/BenefitList/great quality and affordable.png" class="BenefitListIcon" alt="Great Quality and Afforadble Product Icon">
+					<p>Great Quality and Affordable Products</p>
+					<p>Boardman offers great quality skateboard and skateboard parts with affordable prices compared to your local market.</p>
+				</div>	
+
+		</div>
+		
+		<br><br><br><br><br><br><br><br><br><br>
+		
+		<div class = "TI" style = "position: relative;">
+			<div class = "row">
+				<div class = "column">			
+					<h2 class = "TIHeading">What We Do</h2>
+					<p class = "TIContent">Trading and Manufacturing Customized and Ready-made Skateboards and Skateboard parts</p>
+					<p class = "TIContent">Creating New Generations of Skateboard Users</p>
+					<p class = "TIContent">Giving Life to Tradition</p>
+				</div>
+				<div class = "column">
+					<h2 class = "TIHeading">What You Can Do</h2>
+					<p class = "TIContent">Provide Support on Skateboarding Communities</p>
+					<p class = "TIContent">Be Physically Fit and Healthy</p>
+				</div>
+				<div class = "column">
+					<h2 class = "TIHeading">Where We Are</h2>
+					<p class = "TIContent">Philippines</p>
+				</div>
+				<div class = "column">
+					<h2 class = "TIHeading">How To Reach Us</h2>
+					<p class = "TIContent">09064823062</p>
+					<p class = "TIContent">09564586668</p>
+					<p class = "TIContent">09065314081</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

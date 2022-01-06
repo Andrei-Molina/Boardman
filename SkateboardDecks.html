@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Skateboard Decks</title>
+
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+	<link href="https://allfont.net/allfont.css?fonts=anson" rel="stylesheet" type="text/css" />
+
+	<style>
+		
+		body, html
+		{
+			height: 100%;
+			margin: 0;
+		}
+
+		.bg
+		{
+			position: relative;
+			min-width: 100%;
+		}
+
+		.bg::before 
+		{
+			content: "";
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("Images/Background/Skateboard.jpg");
+			filter: brightness(40%);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+
+		.NavBar 	
+		{
+			overflow: hidden;
+			background-color: #463E3F;
+		}
+		
+		.NavBar a 
+		{
+			float: left;
+			color: white;
+			padding: 12px 18px;
+			font-size: 2vw;
+			font-family: 'Anson', arial;
+			text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+			transition: text-decoration-color 500ms;
+		}
+		
+		.NavBar a:hover:not(.active)
+		{
+			background-color: #28282B;
+			color: white;
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+		
+		.NavBar a.active 
+		{
+			background-color: #0D5BE1;
+			color: white;
+		}
+		
+		.Logo	
+		{
+			width: 5%;
+		}
+		
+		h1.WebsiteTitle
+		{
+			text-align: center;
+			font-family: Baskerville old face;
+			background-color: #463E3F;
+			color: white;
+			font-size: 5vw;	
+			border-radius: 1000px 1000px 1000px;
+			box-shadow: 10px -10px 25px;
+		}
+			
+		div.Product
+		{
+			margin: 5px;
+			border: 1px solid #ccc;	
+			width: 180px;
+			position: relative;
+		}
+		
+		div.Product img
+		{
+			width: 100%;
+			height: auto;
+		}
+		
+		div.Description
+		{
+			padding: 15px;
+			text-align: center;
+			border-top: 1px solid #ccc;
+			color: white;
+			font-family: Bahnschrift;
+		}
+		
+		.TitleParts
+		{
+			position: relative;
+			color: white;
+			text-align: center;
+			font-family: Bahnschrift;
+			font-size: 4vw;
+			width: 70%;
+			margin: auto;
+			border-top: 1px solid #357EC7;
+			border-bottom: 1px solid #357EC7;
+		}
+		
+		.column 
+		{
+			float: left;
+			width: 23%;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.TIHeading
+		{
+			color: #3D3C3A;
+		}
+		
+		.row:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.TIContent
+		{
+			font-family: Bahnschrift;
+		}
+		
+		.GoBack
+		{
+			color: white;
+			text-decoration: underline;
+			position: relative;
+			font-size: 20px;
+		}
+		
+		.GoBack:hover
+		{
+			color: #98FF98;
+		}
+	
+		.Order
+		{
+			text-decoration: none;
+			color: white;
+			border: 1px solid white;
+			border-radius: 5px 10px;
+			font-size: 20px;
+			float: left;
+			background-color: #368BC1;
+		}
+		
+		.Order:hover
+		{
+			transform: translate(0, -2px);
+			box-shadow: 5px -10px 75px;
+			background-color: #357EC7;
+		}
+		
+		/* Footer Content Design */
+		
+		.TI1
+		{
+			background-color: #ddd;
+		}
+		
+		.column1 
+		{
+			float: left;
+			width: 15%;
+			padding: 1vw 3vw;
+			text-align: center;
+			margin-left: 3vw;
+		}
+		
+		.TI1Heading
+		{
+			color: #3D3C3A;
+			font-size: 2vw;
+		}
+		
+		.row1:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.TI1Content
+		{
+			font-family: Bahnschrift;
+			font-size: 1vw;
+		}
+		
+		
+		@media screen and (max-width: 800px) 
+		{
+			.row1, .column1 h2, 
+			{
+				font-size: 3vw; /* The font size is 3vw, when the viewport is 800px or smaller */
+			}
+		}
+
+		@media screen and (max-width: 800px) 
+		{
+			.row1, .column1 p 
+			{
+				font-size: 2vw; /* The width is 100%, when the viewport is 800px or smaller */
+			}
+		}
+		
+		@media screen and (max-width: 800px) 
+		{
+			.row, .column 
+			{
+				width: 40% /* The width is 40%, when the viewport is 800px or smaller */
+			}
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<div class="NavBar">
+		<a href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a class="active" href="Products.html">Products</a>
+		<a href="ContactUs.html">Contact Us</a>
+	</div>
+	
+	<h1 class = "WebsiteTitle"><img src = "Images/Logo/Logo.png" class = "Logo" alt="Boardman Logo">Boardman</h1>
+	
+	<div class = "bg">
+		<br><br><br><br>
+		<h1 class = "TitleParts">Skateboard Decks</h1>
+		
+		<div class = "TI" style = "position: relative;">
+			<br><br><br><br><br>
+			
+			<div class = "row">
+				<div class = "column">			
+					<div class = "Product">
+						<img src="Images/Skateboard Decks/Clear Blue Gunsmoke Design.png" alt = "Skateboard Deck Clear Blue Gunsmoke Design">
+						<div class="Description">
+							Clear Blue Gunsmoke Design <br><br>
+							P2,340.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+				
+				<div class = "column">
+					<div class = "Product">
+						<img src="Images/Skateboard Decks/Shecks Design.png" alt = "Skateboard Deck Shecks Design">
+						<div class="Description">
+							Shecks Design <br><br><br>
+							P1,999.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+				
+				<div class = "column">
+					<div class = "Product">
+						<img src="Images/Skateboard Decks/SK8 House Logo Design.png" alt = "Skateboard Deck SK8 House Logo Design">
+						<br><br><br><br>
+						<div class="Description">
+							SK8 House Logo Design Design <br><br>
+							P1,540.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+				
+				<div class = "column">
+					<div class = "Product">
+					<img src="Images/Skateboard Decks/SK8 Mafia Leaf Design.png" alt = "Skateboard Deck SK8 Mafia Leaf Design">
+						<br><br>
+						<div class="Description">
+							SK8 Mafia Leaf Design<br><br>
+							P1,650.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class = "TI" style = "position: relative;">
+			<br><br><br>
+			
+			<div class = "row">
+				<div class = "column">			
+					<div class = "Product">
+						<img src="Images/Skateboard Decks/SK8 Nude Design.png" alt = "Skateboard Deck SK8 Nude Design">
+						<br><br><br>
+						<div class="Description">
+							SK8 Nude Design <br><br>
+							P1,999.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+				
+				<div class = "column">
+					<div class = "Product">
+						<img src="Images/Skateboard Decks/SK8Mafia Design.png" alt = "Skateboard Deck SK8 Mafia Design">
+						<br><br><br>
+						<div class="Description">
+							SK8Mafia Design<br><br>
+							P2,650.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+				
+				<div class = "column">
+					<div class = "Product">
+						<img src="Images/Skateboard Decks/Fly and Sky Design.png" alt = "Skateboard Deck Fly and Sky Design">
+						<div class="Description">
+							Fly and Sky Design <br><br>
+							P1,999.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+				
+				<div class = "column">
+					<div class = "Product">
+					<img src="Images/Skateboard Decks/Eagle Style Design.png" alt = "Skateboard Deck Eagle Style Design">
+						<br><br>
+						<div class="Description">
+							Eagle Style Design<br><br>
+							P2,100.00
+						</div>
+					</div>
+					<a href="SubmissionForm.html" class="Order">Order Now!</a>
+				</div>
+			</div>
+			<br>
+			<a href="SkateboardParts.html" class="GoBack">Go Back to Skateboard Parts</a>
+		</div>
+		
+		<div class = "TI1" style = "position: relative;">
+			<div class = "row1">
+				<div class = "column1">			
+					<h2 class = "TIHeading">What We Do</h2>
+					<p class = "TIContent">Trading and Manufacturing Customized and Ready-made Skateboards and Skateboard parts</p>
+					<p class = "TIContent">Creating New Generations of Skateboard Users</p>
+					<p class = "TIContent">Giving Life to Tradition</p>
+				</div>
+				<div class = "column1">
+					<h2 class = "TIHeading">What You Can Do</h2>
+					<p class = "TIContent">Provide Support on Skateboarding Communities</p>
+					<p class = "TIContent">Be Physically Fit and Healthy</p>
+				</div>
+				<div class = "column1">
+					<h2 class = "TIHeading">Where We Are</h2>
+					<p class = "TIContent">Philippines</p>
+				</div>
+				<div class = "column1">
+					<h2 class = "TIHeading">How To Reach Us</h2>
+					<p class = "TIContent">09064823062</p>
+					<p class = "TIContent">09564586668</p>
+					<p class = "TIContent">09065314081</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

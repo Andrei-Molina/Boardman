@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Order Submitted</title>
+
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+	<link href="https://allfont.net/allfont.css?fonts=anson" rel="stylesheet" type="text/css" />
+	
+	<style>
+		
+		body, html 
+		{
+			height: 100%;
+			margin: 0;
+		}
+
+		.bg	    
+		{
+			position: relative;
+			min-width: 100%;
+		}
+
+		.bg::before 
+		{
+			content: "";
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("Images/Background/Skateboard.jpg");
+			filter: brightness(40%);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+
+		.NavBar 	
+		{
+			overflow: hidden;
+			background-color: #463E3F;
+		}
+		
+		.NavBar a 
+		{
+			float: left;
+			color: white;
+			padding: 12px 18px;
+			font-size: 2vw;
+			font-family: 'Anson', arial;
+			text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+			transition: text-decoration-color 500ms;
+		}
+		
+		.NavBar a:hover:not(.active)
+		{
+			background-color: #28282B;
+			color: white;
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+		
+		.NavBar a.active 
+		{
+			background-color: #0D5BE1;
+			color: white;
+		}
+		
+		.Logo	
+		{
+			width: 5%;
+		}
+		
+		h1.WebsiteTitle
+		{
+			text-align: center;
+			font-family: Baskerville old face;
+			background-color: #463E3F;
+			color: white;
+			font-size: 5vw;	
+			border-radius: 1000px 1000px 1000px;
+			box-shadow: 10px -10px 25px;
+		}
+			
+		.Result h1
+		{
+			color: white;
+			font-family: Bahnschrift;
+			text-align: center;
+			padding: 15px 20px;
+		}
+		
+		.GoBack
+		{
+			color: white;
+			text-decoration: underline;
+			position: relative;
+			font-size: 20px;
+		}
+		
+		.GoBack:hover
+		{
+			color: #98FF98;
+		}
+		
+		.GoBackHome
+		{
+			color: white;
+			text-decoration: underline;
+			position: relative;
+			font-size: 20px;
+			float: right;
+		}
+		
+		.GoBackHome:hover
+		{
+			color: #98FF98;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<div class="NavBar">
+		<a href="index.html">Home</a>
+		<a href="About.html">About</a>
+		<a class="active" href="Products.html">Products</a>
+		<a href="ContactUs.html">Contact Us</a>
+	</div>
+	
+	<h1 class = "WebsiteTitle"><img src = "Images/Logo/Logo.png" class = "Logo" alt="Boardman Logo">Boardman</h1>
+	
+	<div class = "bg">
+		<div class = "Result" style="position: relative;">
+		<br><br><br><br>	
+			<h1>You Have Sent Your Response.<br>
+			Thank you for your patronage.</h1>
+		<br><br><br><br>
+			<h1>You Will Be Hearing From Us In 2 - 3 Days.</h1>
+		<br><br><br><br>
+		</div>
+		
+		<a href="SkateboardDecks.html" class="GoBack">Order Another</a>
+		<a href="index.html" class="GoBackHome">Go Back to Home</a> 
+	</div>
+</body>
+</html>

@@ -1,0 +1,651 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+	<title>About</title>
+
+	<meta name="viewport" content="width=device-width, initial scale=1.0">
+
+	<link href="https://allfont.net/allfont.css?fonts=anson" rel="stylesheet" type="text/css" />
+
+	<style>
+	
+		@media screen and (max-width: 800px) 
+		{
+			.bg 
+			{
+			width: 100%;
+			}
+		}
+		
+		body, html 
+		{
+			height: 100%;
+			margin: 0;
+		}
+
+		.bg	    
+		{
+			position: relative;
+			min-width: 100%;
+		}
+
+		.bg::before 
+		{
+			content: "";
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url("Images/Background/Skateboard.jpg");
+			filter: brightness(40%);
+			background-size: cover;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+		}
+
+		.BannerPosition    
+		{
+			position: relative;
+		}
+
+		
+
+		.NavBar 	
+		{
+			overflow: hidden;
+			background-color: #463E3F;
+		}
+		
+		.NavBar a 
+		{
+			float: left;
+			color: white;
+			padding: 12px 18px;
+			font-size: 2vw;
+			font-family: 'Anson', arial;
+			text-decoration: underline 0.15em rgba(0, 0, 0, 0);
+			transition: text-decoration-color 500ms;
+		}
+		
+		.NavBar a:hover:not(.active)
+		{
+			background-color: #28282B;
+			color: white;
+			text-decoration: underline;
+			text-decoration-color: rgba(255, 255, 255, 1);
+		}
+		
+		.NavBar a.active 
+		{
+			background-color: #0D5BE1;
+			color: white;
+		}
+		
+		.Logo	
+		{
+			width: 5%;
+		}
+		
+		h1.WebsiteTitle
+		{
+			text-align: center;
+			font-family: Baskerville old face;
+			background-color: #463E3F;
+			color: white;
+			font-size: 5vw;	
+			border-radius: 1000px 1000px 1000px;
+			box-shadow: 10px -10px 25px;
+		}
+		
+		.letter  
+		{
+			cursor: pointer;
+		}
+		
+		/* Mission And Vision CheckBox Design */
+		
+		#expand-toggleAboutUs
+		{
+			display: none;	
+			bottom: 1000px; 
+			left: 0; 
+			position: relative;
+		}
+
+		/* Mission and Vision Text Design */
+		
+		.expandableAboutUs
+		{	
+			display: none;
+			position: relative;
+			bottom: 650px;
+			left: 275px;
+			font-family: Baskerville Old face;
+			font-size: 30px;
+			text-align: center;
+			box-shadow: 0 0 0 10px #1589FF;
+			border-radius: 10px;
+			background-color: white;
+			color: black;
+		}
+
+		/* Shows Mission and Vision Text When User Checks the Checkbox*/
+		
+		#expand-toggleAboutUs:checked ~ * .expandableAboutUs
+		{
+			display: inline-block;
+		}
+		
+		/* Company Description Checkbox Design */
+
+		#expand-toggleDescription	
+		{
+			display: none;
+			bottom: 1000px; 
+			left: 0; 
+			position: relative;
+		}
+
+		/* Company Description Text Design */
+		
+		.expandableDescription
+		{	
+			display: none;
+			position: relative;
+			bottom: 650px;
+			left: 150px;
+			font-family: Baskerville Old face;
+			font-size: 30px;
+			text-align: center;
+			box-shadow: 0 0 0 10px #1589FF;
+			border-radius: 10px;
+			background-color: white;
+			color: black;
+		}
+
+		/* Shows the Company Description When User clicks on Checkbox*/
+		
+		#expand-toggleDescription:checked ~ * .expandableDescription 
+		{
+			display: inline-block;
+		}
+
+		/* Company Location Checkbox Design */
+
+		#expand-toggleLocation	
+		{
+			display: none;
+			bottom: 1000px; 
+			left: 0; 
+			position: relative;
+		}
+
+		/* Company Location Text Design */
+		
+		.expandableLocation
+		{	
+			display: none;
+			position: relative;
+			bottom: 100px;
+			left: 230px;
+			font-family: Baskerville Old face;
+			font-size: 30px;
+			text-align: center;
+			box-shadow: 0 0 0 10px #1589FF;
+			border-radius: 10px;
+			background-color: white;
+			color: black;
+		}
+		
+		/* Shows Company Location Text When User Clicks on the Checkbox */
+		
+		#expand-toggleLocation:checked ~ * .expandableLocation
+		{
+			display: inline-block;
+		}
+		
+		/* Company Founders Checkbox Design */
+		
+		#expand-toggleFounders	{
+			display: none;
+			bottom: 1000px; 
+			left: 0; 
+			position: relative;
+		}
+
+		/* Company Founders Text Design */
+		
+		.expandableFounders
+		{	
+			display: none;
+			position: relative;
+			bottom: 100px;
+			left: 215px;
+			font-family: Baskerville Old face;
+			font-size: 30px;
+			text-align: center;
+			box-shadow: 0 0 0 10px #1589FF;
+			border-radius: 10px;
+			background-color: white;
+			color: black;
+		}
+		
+		/* Shows Company Founders Text When User Clicks on Checkbox */
+		
+		#expand-toggleFounders:checked ~ * .expandableFounders
+		{
+			display: inline-block;
+		}
+		
+		/* Adds Design to Every Headings in About Us */
+		
+		.AboutUsHeading
+		{
+			font-size: 50px;
+			font-weight: bold;
+			font-family: Bahnschrift;
+			background-color: #34282C;
+			color: white;
+			margin: 0;
+		}
+		
+		/* Company Mission and Vision Content's Design */
+		
+		.MissionAndVisionContent
+		{
+			font-family: Bahnschrift;
+			font-size: 2vw;
+		}
+		
+		/* Company Description Content's Design */
+		
+		.CompanyDescriptionContent
+		{
+			font-family: Bahnschrift;
+			font-size: 2vw;
+		}
+		
+		.CompanyLocationContent
+		{
+			font-family: Bahnschrift;
+			font-size: 2vw;
+		}
+		
+		/* All of the Text Below Adds Design to the Text in Founders */
+		
+		.MolinaTitle
+		{
+			font-size: 35px;
+			font-family: Bahnschrift;
+			font-weight: bold;
+			background-color: #454545;
+			color: white;
+		}
+		
+		.FounderMolina
+		{
+			max-width: 300px;
+			float: left;
+		}
+		
+		.MolinaContent
+		{
+			font-size: 20px;
+			font-family: Bahnschrift;
+		}
+		
+		.MolinaQuote
+		{
+			font-family: Bahnschrift;
+			background-color: #454545;
+			color: white;
+		}
+		
+		.OsiaTitle
+		{
+			font-size: 35px;
+			font-family: Bahnschrift;
+			font-weight: bold;
+			background-color: #454545;
+			color: white;
+		}
+		
+		.FounderOsia
+		{
+			max-width: 300px;
+			float: left;
+		}
+		
+		.OsiaContent
+		{
+			font-size: 20px;
+			font-family: Bahnschrift;
+		}
+		
+		.OsiaQuote
+		{
+			font-family: Bahnschrift;
+			background-color: #454545;
+			color: white;
+		}
+		
+		.PenafielTitle
+		{
+			font-size: 35px;
+			font-family: Bahnschrift;
+			font-weight: bold;
+			background-color: #454545;
+			color: white;
+		}
+		
+		.FounderPenafiel
+		{
+			max-width: 300px;
+			float: left;
+		}
+		
+		
+		.PenafielContent
+		{
+			font-size: 20px;
+			font-family: Bahnschrift;
+		}
+		
+		.PenafielQuote
+		{
+			font-family: Bahnschrift;
+			background-color: #454545;
+			color: white;
+		}
+		
+		/* Footer Content Design */
+		
+		.TI
+		{
+			background-color: #ddd;
+		}
+		
+		.column 
+		{
+			float: left;
+			width: 15%;
+			padding: 1vw 3vw;
+			text-align: center;
+			margin-left: 3vw;
+		}
+		
+		.TIHeading
+		{
+			color: #3D3C3A;
+			font-size: 2vw;
+		}
+		
+		.row:after
+		{
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.TIContent
+		{
+			font-family: Bahnschrift;
+			font-size: 1vw;
+		}
+		
+		
+		@media screen and (max-width: 800px) 
+		{
+			.row, .column h2, 
+			{
+				font-size: 3vw; /* The font size is 3vw, when the viewport is 800px or smaller */
+			}
+		}
+
+		@media screen and (max-width: 800px) 
+		{
+			.row, .column p 
+			{
+				font-size: 2vw; /* The width is 100%, when the viewport is 800px or smaller */
+			}
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<div class="NavBar">
+		<a  href="index.html">Home</a>
+		<a class="active" href="About.html">About</a>
+		<a href="Products.html">Products</a>
+		<a href="ContactUs.html">Contact Us</a>
+	</div>
+
+	<h1 class = "WebsiteTitle"><img src = "Images/Logo/Logo.png" class = "Logo" alt="Boardman Logo">Boardman</h1>
+
+	<div class = "bg">
+		<div class = "AboutUs" style="text-align:center;">
+			<!-- About Us Image -->
+			<img src="Images/AboutUs/about us.png" alt = "About Us Icons" style="position: relative; width: 1080px; height: 1080px;" usemap = "#AboutUs">
+			<map name ="AboutUs">
+			
+			<!-- Company Mission and Vision Area Coordinates and Expandable Content-->
+				<div id = "MissionVisionText">
+					<input type="checkbox" id="expand-toggleAboutUs" style="bottom: 1000px; left: 0; position: relative;" />
+						<div class = "MissionVisionResult">
+							<table class ="AboutUsMissionVision">
+								<tbody>
+									<div>
+										<!-- Mission and Vision Text-->
+   										<tr class="expandableAboutUs">
+											<td>
+												<p class = "AboutUsHeading">Boardman's Mission</p>
+												<p class = "MissionAndVisionContent">Boardman aspires to offer customers the most affordable prices <br>
+												with the best available skateboards and skateboard parts to nurture <br>
+												the young and the old skateboard enthusiasts.</p><hr>
+												<p class = "AboutUsHeading">Boardman's Vision</p>
+												<p class = "MissionAndVisionContent">Boardman envisions to be Earth's most popular and affordable <br>
+												store where people can discover their passion for skateboarding <br> 
+												to create a welcoming and loving community of skateboard enthusiasts.</p>
+											</td>
+										</tr>
+									</div>
+								</tbody>
+							</table>
+						</div>
+					<label for = "expand-toggleAboutUs" id = "expand-btnAboutUs">
+						<!-- Area Coordinate for Mission and Vision Text -->
+						<area shape = "poly" coords="831, 302, 838, 302, 839, 312, 845, 302, 853, 302, 848, 323, 843, 323, 845, 310, 840, 318, 836, 318, 834, 309, 831, 323, 826, 323, 831, 302" class="letter">
+						<area shape = "rect" coords="858, 301, 863, 305" class = "letter">
+						<area shape = "rect" coords="856, 307, 858, 323" class = "letter">
+						<area shape = "poly" coords="878, 311, 870, 310, 869, 312, 874, 314, 878, 317, 878, 323, 867, 323, 863, 322, 863, 318, 867, 319, 873, 319, 872, 317, 867, 315, 864, 311, 868, 307, 872, 306, 878, 308, 878, 311" class = "letter">
+						<area shape = "poly" coords="896, 307, 885, 307, 882, 314, 887, 316, 890, 318, 886, 320, 881, 319, 879, 321, 885, 323, 893, 321, 895, 317, 890, 313, 886, 312, 888, 310, 895, 311, 896, 307" class = "letter">
+						<area shape = "rect" coords="902, 301, 907, 305" class = "letter">
+						<area shape = "rect" coords="901, 307, 902, 323" class = "letter">
+						<area shape = "poly" coords="918, 307, 911, 309, 907, 316, 910, 321, 913, 323, 917, 323, 922, 320, 924, 317, 924, 311, 922, 307, 918, 307" class ="letter">
+						<area shape = "poly" coords="929, 307, 935, 308, 940, 307, 944, 309, 942, 323, 936, 323, 938, 316, 938, 310, 935, 310, 933, 313, 931, 323, 927, 323, 929, 307" class = "letter">
+						<area shape = "poly" coords="861, 342, 870, 342, 874, 345, 871, 357, 866, 357, 860, 358, 857, 354, 858, 350, 862, 348, 869, 348, 869, 345, 865, 345, 860, 346, 861, 342" class = "letter">						
+						<area shape = "poly" coords="880, 342, 885, 343, 893, 342, 894, 347, 892, 358, 887, 358, 889, 345, 886, 345, 883, 346, 881, 358, 876, 358, 880, 342" class = "letter">
+						<area shape = "poly" coords="911, 335, 910, 343, 902, 342, 899, 345, 896, 351, 898, 357, 903, 358, 906, 357, 908, 358, 912, 358, 914, 348, 916, 336, 911, 335," class = "letter">
+						<area shape = "poly" coords="841, 372, 846, 372, 848, 386, 851, 381, 856, 372, 861, 372, 855, 384, 850, 393, 843, 393, 842, 385, 841, 372" class = "letter">
+						<area shape = "rect" coords="864, 371, 869, 375" class = "letter">
+						<area shape = "rect" coords="862, 377, 864, 393" class = "letter">
+						<area shape = "poly" coords="885, 377, 875, 377, 870, 381, 873, 386, 879, 387, 879, 390, 874, 390, 869, 388, 869, 392, 877, 393, 883, 390, 884, 385, 878, 383, 876, 381, 879, 380, 885, 382, 885 377" class = "letter">
+						<area shape = "rect" coords="891, 371, 896, 375" class = "letter">
+						<area shape = "rect" coords="889, 377, 891, 393" class = "letter">
+						<area shape = "poly" coords="907, 377, 900, 379, 896, 386, 900, 392, 906, 393, 910, 391, 913, 386, 914, 381, 910, 377, 907, 377" class = "letter">
+						<area shape = "poly" coords="919, 377, 923, 378, 930, 377, 933, 379, 932, 386, 931, 393, 926, 393, 927, 385, 928, 380, 924, 380, 921, 386, 920, 393, 915, 393, 917, 384, 919, 377" class = "letter">
+						<!-- Area Coordinate for Mission and Vision Icon -->
+						<area shape = "poly" coords="830, 198, 806, 231, 830, 252, 827, 259, 830, 265, 839, 267, 839, 272, 844, 276, 850, 276, 852, 281, 857, 284, 861, 284, 865, 288, 874, 291, 883, 290, 890, 290, 896, 287, 905, 286, 908, 281, 915, 281, 921, 278, 922, 273, 930, 272, 933, 267, 933, 260, 928, 255, 931, 252, 951, 238, 945, 226, 930, 202, 923, 204, 917, 205, 904, 199, 893, 197, 880, 200, 868, 196, 860, 196, 848, 200, 840, 201, 830, 198" class = "letter">
+					</label>
+				</div>
+					
+			<!-- Company Description Area Coordinates and Expandable Content-->
+				<div id="CompanyDescription">
+					<input type="checkbox" id="expand-toggleDescription" />
+						<div class = "CompanyDescriptionResult">
+							<table class ="CompanyDescriptionText">
+								<tbody>
+									<div>
+										<!-- Company Description Text-->
+										<tr class="expandableDescription">
+											<td>
+												<p class = "AboutUsHeading">Company Description</p>
+												<p class = "CompanyDescriptionContent">Boardman is a company that deals with the trading and manufacturing of goods<br>
+												founded by three individuals: Andrei Molina, Jhon Lloyd Osia, and John Vincent Peñafiel.<br><br>
+												The company purchases manufactured products from different overseas company, while also<br>
+												producing personalized skateboards for customers.</p>
+											</td>
+										</tr>
+									</div>
+								</tbody>
+							</table>
+						</div>
+					<label for = "expand-toggleDescription" id = "expand-btnDescription">
+						<!-- Area Coordinate for Company Description Text -->
+						<area shape = "poly" coords="97, 354, 87, 353, 82, 354, 74, 363, 74, 372, 78, 377, 82, 378, 90, 377, 93, 375, 94, 370, 91, 371, 89, 373, 83, 372, 81, 367, 85, 359, 91, 358, 96, 361, 97, 354"class = "letter">
+						<area shape = "poly" coords="110, 359, 102, 361, 98, 367, 98, 374, 102, 377, 106, 378, 111, 377, 116, 373, 118, 367, 117, 362, 114, 360, 110, 359" class = "letter">
+						<area shape = "poly" coords="124, 360, 129, 360, 130, 361, 135, 359, 140, 361, 141, 362, 148, 358, 153, 362, 151, 373, 150, 378, 144, 377, 146, 370, 146, 363, 144, 363, 141, 364, 139, 377, 132, 377, 134, 364, 133, 363, 129, 365, 126, 377, 120, 377, 122, 369, 124, 360" class = "letter">
+						<area shape = "poly" coords="159, 360, 154, 385, 160, 385, 162, 377, 169, 378, 174, 373, 177, 366, 175, 361, 171, 359, 168, 359, 165, 361, 165, 360, 159, 360" class = "letter">
+						<area shape = "poly" coords="182, 359, 195, 359, 198, 361, 197, 369, 195, 378, 189, 378, 189, 376, 183, 378, 177, 375, 178, 370, 183, 366, 186, 366, 192, 366, 191, 363, 187, 363, 182, 364, 182, 359" class = "letter">
+						<area shape = "poly" coords="204, 360, 201, 370, 200, 377, 206, 377, 208, 372, 209, 364, 213, 363, 215, 364, 214, 369, 213, 377, 219, 377, 221, 369, 221, 362, 219, 359, 215, 359, 213, 359, 210, 362, 210, 360, 204, 360" class = "letter">
+						<area shape = "poly" coords="226, 360, 232, 360, 233, 371, 236, 367, 240, 360, 246, 360, 238, 374, 231, 385, 224, 385, 229, 378, 227, 370, 226, 360" class = "letter">
+						<area shape = "poly" coords="59, 394, 57, 407, 54, 418, 69, 418, 75, 415, 79, 409, 80, 401, 76, 396, 71, 395, 59, 394" class = "letter">
+						<area shape = "poly" coords="87, 411, 101, 411, 101, 403, 96, 400, 89, 400, 84, 402, 82, 406, 81, 415, 85, 418, 91, 419, 96, 418, 98, 416, 99, 413, 96, 414, 90, 415, 88, 413, 87, 411" class = "letter">
+						<area shape = "poly" coords="103, 413, 102, 418, 110, 419, 117, 417, 120, 414, 119, 410, 114, 407, 110, 406, 110, 404, 114, 403, 116, 404, 120, 406, 121, 400, 115, 399, 108, 401, 104, 404, 105, 410, 110, 411, 114, 412, 114, 414, 109, 414, 103, 413" class = "letter">
+						<area shape = "poly" coords="141, 406, 141, 400, 133, 400, 128, 402, 124, 406, 123, 414, 126, 417, 130, 419, 134, 419, 139, 417, 139, 413, 132, 414, 129, 412, 129, 407, 132, 405, 135, 404, 137, 403, 141, 406" class = "letter">
+						<area shape = "poly" coords="146, 401, 144, 410, 142, 418, 148, 419, 149, 413, 150, 406, 153, 406, 158, 405, 158, 401, 151, 403, 151, 401, 146, 401" class = "letter">
+						<area shape = "rect" coords="163, 394, 169, 398" class = "letter">
+						<area shape = "rect" coords="162, 401, 164, 419" class = "letter">
+						<area shape = "poly" coords="173, 401, 169, 418, 167, 426, 173, 426, 174, 418, 178, 419, 183, 419, 187, 416, 189, 410, 190, 403, 185, 400, 181, 400, 178, 402, 178, 401, 173, 401" class = "letter">
+						<area shape = "poly" coords="197, 396, 197, 401, 194, 401, 193, 404, 195, 404, 193, 415, 195, 419, 199, 419, 204, 417, 204, 414, 200, 415, 199, 413, 200, 408, 200, 405, 207, 405, 207, 401, 202, 401, 202, 396, 197, 396" class = "letter">
+						<area shape = "rect" coords="212, 394, 218, 398" class = "letter">
+						<area shape = "rect" coords="211, 401, 213, 419" class = "letter">
+						<area shape = "poly" coords="230, 400, 222, 402, 219, 407, 218, 414, 222, 418, 227, 419, 234, 417, 238, 412, 238, 404, 235, 400, 230, 400" class = "letter">
+						<area shape = "poly" coords="245, 401, 242, 411, 241, 419, 247, 419, 248, 414, 249, 408, 250, 405, 253, 404, 255, 403, 256, 408, 254, 413, 253, 419, 259, 419, 261, 410, 262, 403, 257, 399, 250, 403, 250, 401, 245, 401" class = "letter">
+						<!-- Area Coordinate for Company Description Icon -->
+						<area shape = "poly" coords="157, 49, 159, 58, 160, 76, 165, 106, 170, 106, 174, 112, 174, 117, 176, 117, 176, 122, 179, 122, 179, 134, 183, 134, 183, 154, 186, 154, 186, 176, 187, 207, 187, 238, 187, 248, 189, 248, 195, 253, 197, 283, 203, 288, 213, 294, 213, 301, 226, 310, 226, 314, 231, 319, 191, 328, 150, 338, 123, 344, 114, 333, 97, 312, 102, 312, 102, 304, 113, 302, 114, 291, 127, 290, 127, 264, 129, 249, 133, 249, 134, 241, 134, 155, 135, 133, 139, 133, 140, 122, 140, 117, 144, 117, 144, 111, 147, 107, 153, 106, 154, 81, 157, 49" class = "letter">
+					</label>	
+				</div>
+					
+			<!-- Company Location Area Coordinates and Expandable Content-->
+				<div id="CompanyLocation">
+					<input type="checkbox" id="expand-toggleLocation" />
+						<div class = "CompanyLocationResult">
+							<table class ="CompanyLocationText">
+								<tbody>
+									<div>
+										<!-- Company Location Text-->
+										<tr class="expandableLocation">
+											<td>
+												<p class = "AboutUsHeading">Company Location</p>
+												<p class = "CompanyLocationContent">Boardman is located at Bonifacio Global City (BGC) in Makati, Metro Manila. <br>
+												The company mainly operates through their online website, with the store in BGC <br>
+												serving as a drop-off point for ordered skateboards.</p>
+											</td>
+									</div>
+								</tbody>
+							</table>
+						</div>
+					<label for = "expand-toggleLocation" id = "expand-btnLocation">
+						<!-- Area Coordinate for Company Location Text -->
+						<area shape = "poly" coords="835, 874, 841, 874, 839, 883, 837, 893, 847, 893, 847, 898, 829, 897, 831, 888, 835, 874" class = "letter">
+						<area shape = "poly" coords="862, 878, 852, 884, 850, 893, 855, 897, 862, 898, 866, 896, 870, 892, 871, 885, 869, 881, 862, 878" class = "letter">
+						<area shape = "poly" coords="891, 885, 886, 883, 881, 885, 880, 891, 884, 893, 889, 892, 889, 897, 882, 898, 875, 894, 874, 886, 879, 880, 886, 878, 892, 880, 891, 885" class = "letter">
+						<area shape = "poly" coords="896, 879, 896, 883, 906, 883, 906, 886, 898, 886, 892, 892, 894, 898, 900, 898, 903, 896, 904, 898, 909, 898, 911, 890, 912, 882, 908, 879, 904, 879, 896, 879" class = "letter">
+						<area shape = "poly" coords="920, 874, 919, 880, 916, 879, 915, 884, 917, 884, 916, 891, 917, 897, 920, 898, 926, 897, 926, 894, 922, 893, 922, 889, 924, 884, 929, 884, 930, 880, 924, 880, 926, 875, 920, 874" class = "letter">
+						<area shape = "rect" coords="934, 873, 941, 877" class = "letter">
+						<area shape = "rect" coords="934, 880, 936, 898" class = "letter">
+						<area shape = "poly" coords="954, 878, 943, 883, 941, 892, 944, 897, 950, 898, 957, 895, 961, 890, 960, 882, 956, 879, 954, 878" class = "letter">
+						<area shape = "poly" coords="967, 880, 973, 880, 973, 881, 979, 878, 984, 881, 984, 889, 982, 898, 976, 898, 978, 888, 978, 883, 975, 883, 972, 884, 970, 898, 963, 898, 965, 888, 967, 880" class = "letter">
+						<!-- Area Coordinate for Company Location Icon -->
+						<area shape = "poly" coords="905, 725, 869, 732, 846, 751, 832, 777, 831, 812, 850, 847, 875, 863, 894, 868, 914, 867, 931, 862, 947, 851, 958, 841, 968, 828, 973, 806, 970, 773, 951, 743, 929, 729, 905, 725" class = "letter">
+					</label>		
+				</div>
+					
+			<!-- Company Founders Area Coordinates and Expandable Content-->
+				<div id="CompanyFounders">
+					<input type="checkbox" id="expand-toggleFounders" />
+						<div class = "CompanyFoundersResult">
+							<table class ="CompanyFoundersText">
+								<tbody>
+									<div>
+										<tr class="expandableFounders">
+											<td>
+												<!-- Company Founders Text-->
+												<p style="padding: 20px 30px;" class = "AboutUsHeading"><b>Company Founders</b><br></p>
+												<p class = "MolinaTitle"><img src="Images/Founders/molina.png" class = "FounderMolina" alt = "A Picture of Andrei Molina">Andrei Molina</p>
+												<p class = "MolinaContent">Andrei is one of the three founders of the Boardman Company. <br>
+												Having worked for several years in the Trading and Manufacturing <br> Industry
+												and being part of many citywide projects during his college years, <br><br>
+												Now, he is responsible for overseeing the overall wellbeing of the company. <br>
+												</p>
+												<p class = "MolinaQuote"><i>"Someday, I hope my work will give my customers wings of courage."</i></p>
+												
+												<p class = "OsiaTitle"><img src="Images/Founders/osia.png" class = "FounderOsia" alt = "A Picture of Jhon Lloyd Osia">Jhon Lloyd Osia</p>
+												<p class = "OsiaContent">Jhon Lloyd is one of the three founders of the Boardman Company.<br><br>
+												As a master of arts and crafts, he has created designs for big companies such as Nike and Gucci.<br><br>
+												Now, he is responsible for designing and creating everything in Boardman. <br>
+												</p>
+												<p class = "OsiaQuote"><i>"I wish my customers to feel happiness in my creations."</i></p>
+												
+												<p class = "PenafielTitle"><img src="Images/Founders/penafiel.png" class = "FounderPenafiel" alt = "A Picture of John Vincent Peñafiel">John Vincent Peñafiel</p>
+												<p class = "PenafielContent">John Vincent is one of the three founders of the Boardman Company.<br>
+												By being a pro at gathering information,
+												he has written content for various company websites <br>
+												and news outlets, such as Rappler and CNN. <br><br>
+												Now, he is responsible for writing every content, and planning new events of the company.</p>
+												<p class = "PenafielQuote"><i>"These contents and events is something I hope my customers enjoy."</i></p>
+											</td>
+										</tr>
+									</div>
+								</tbody>
+							</table>
+						</div>
+					<label for = "expand-toggleFounders" id = "expand-btnFounders">
+						<!-- Area Coordinate for Company Founders Text -->
+						<area shape = "poly" coords="122, 890, 139, 890, 139, 895, 127, 895, 127, 898, 136, 898, 136, 904, 125, 904, 123, 914, 116, 913, 119, 901, 122, 890" class = "letter">
+						<area shape = "poly" coords="150, 895, 140, 899, 138, 908, 141, 913, 146, 914, 154, 911, 158, 902, 154, 895, 150, 895" class = "letter">
+						<area shape = "poly" coords="164, 896, 170, 896, 169, 903, 168, 909, 174, 909, 175, 903, 176, 896, 182, 896, 180, 905, 178, 914, 173, 914, 173, 912, 167, 914, 162, 912, 162, 904, 164, 896" class = "letter">
+						<area shape = "poly" coords="188, 896, 193, 896, 194, 897, 201, 894, 206, 898, 205, 906, 203, 914, 197, 914, 198, 906, 199, 899, 196, 899, 193, 900, 191, 908, 190, 914, 185, 914, 186, 905, 188, 896" class = "letter">
+						<area shape = "poly" coords="226, 889, 231, 889, 228, 902, 226, 914, 221, 914, 221, 912, 215, 914, 210, 911, 208, 905, 211, 899, 218, 894, 225, 896, 226, 889" class = "letter">
+						<area shape = "poly" coords="238, 906, 252, 906, 251, 898, 244, 895, 235, 897, 232, 905, 235, 913, 243, 914, 249, 912, 249, 908, 242, 909, 238, 906" class = "letter">
+						<area shape = "poly" coords="257, 895, 255, 906, 257, 914, 259, 914, 261, 906, 262, 901, 265, 901, 269, 901, 270, 896, 266, 896, 263, 898, 262, 895, 257, 895 " class = "letter">
+						<area shape = "poly" coords="288, 896, 280, 895, 274, 896, 271, 900, 274, 905, 280, 907, 280, 909, 269, 908, 269, 913, 276, 914, 283, 912, 287, 907, 281, 902, 276, 899, 282, 899, 288, 900, 288, 896" class = "letter">
+						<!-- Area Coordinate for Company Founders Icon -->
+						<area shape = "poly" coords="208, 727, 173, 733, 155, 743, 143, 755, 137, 783, 137, 797, 124, 811, 113, 826, 112, 841, 120, 855, 136, 867, 171, 878, 206, 882, 241, 876, 273, 865, 293, 850, 299, 834, 282, 811, 275, 802, 271, 766, 269, 749, 253, 735, 208, 727" class = "letter">
+					</label>	
+				</div>
+		</div>
+		
+		<div class = "TI" style = "position: relative;">
+			<div class = "row">
+				<div class = "column">			
+					<h2 class = "TIHeading">What We Do</h2>
+					<p class = "TIContent">Trading and Manufacturing Customized and Ready-made Skateboards and Skateboard parts</p>
+					<p class = "TIContent">Creating New Generations of Skateboard Users</p>
+					<p class = "TIContent">Giving Life to Tradition</p>
+				</div>
+				<div class = "column">
+					<h2 class = "TIHeading">What You Can Do</h2>
+					<p class = "TIContent">Provide Support on Skateboarding Communities</p>
+					<p class = "TIContent">Be Physically Fit and Healthy</p>
+				</div>
+				<div class = "column">
+					<h2 class = "TIHeading">Where We Are</h2>
+					<p class = "TIContent">Philippines</p>
+				</div>
+				<div class = "column">
+					<h2 class = "TIHeading">How To Reach Us</h2>
+					<p class = "TIContent">09064823062</p>
+					<p class = "TIContent">09564586668</p>
+					<p class = "TIContent">09065314081</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
